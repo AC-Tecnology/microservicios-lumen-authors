@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
+        //$this->call('AuthorSeeder');
+        DB::table('authors')->insert([
+            'name' => Str::random(10),
+            'gender' => Str::random(10),
+            'country' => Str::random(10),
+        ]);
     }
 }
