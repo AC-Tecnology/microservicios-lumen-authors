@@ -22,5 +22,23 @@ class DatabaseSeeder extends Seeder
             'gender' => Str::random(10),
             'country' => Str::random(10),
         ]);
+
+        DB::table('authors')->insert([
+            'name' => 'Arturo Cabrera',
+            'gender' => 'Male',
+            'country' => 'Ecuador',
+        ]);
+
+        DB::table('authors')->insert([
+            'name' => 'Adrian Cabrera',
+            'gender' => 'Male',
+            'country' => 'Venezuela',
+        ]);
+
+        DB::table('authors')->insert([
+            'name' => 'Dayanara Arellano',
+            'gender' => 'Female',
+            'country' => 'Ecuador',
+        ]);
     }
 }
