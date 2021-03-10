@@ -16,3 +16,17 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/authors', 'AuthorController@index');
+$router->post('/authors', 'AuthorController@store');
+$router->get('/authors/{id}', 'AuthorController@show');
+$router->put('/authors/{id}', 'AuthorController@update');
+$router->patch('/authors/{id}', 'AuthorController@update');
+$router->delete('/authors/{id}', 'AuthorController@destroy');
+//Route::get('authors', 'AuthorController@index');
+/*
+$router->get('/authors', function(){
+	return 'hola';
+});
+
+*/
